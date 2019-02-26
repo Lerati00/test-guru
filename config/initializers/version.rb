@@ -1,1 +1,7 @@
-Rails.application.config.version = '0.1.0'
+module TestGuru
+  VERSION = '0.2.0'
+
+  def self.version
+    VERSION
+  end
+end
