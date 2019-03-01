@@ -1,32 +1,32 @@
-User.create(login: 'ss', password: 'ss')
+users = User.create(login: 'ss', password: 'ss')
 
-Category.create([
+categogies = Category.create([
   { title: 'Разное' },
   { title: 'Исскуство' },
   { title: 'Спорт' },
   { title: 'Наука' }
 ])
 
-Test.create([
-  { category_id: 1, title: 'Просто тест' },
-  { category_id: 1, title: 'Супер тест' },
-  { category_id: 1, title: 'Тест' }
+tests = Test.create([
+  { category_id: categogies[0].id, author_id: user[0].id, title: 'Просто тест' },
+  { category_id: categogies[0].id, author_id: user[0].id, title: 'Супер тест' },
+  { category_id: categogies[0].id, author_id: user[0].id, title: 'Тест' }
 ])
 
-Question.create([
-  { test_id: 1, body: "Из какого предмета кухонного обихода отлили стойкого оловянного солдатика из сказки Андерсена?" },
-  { test_id: 1, body: "Как называется линия, изображающая процесс, происходящий без теплообмена с окружающей средой?" },
-  { test_id: 1, body: 'Какое изысканное блюдо принесли на обед отбывавшему срок в пятнадцать суток Верзиле в комедии Л.Гайдая "Операция Ы"?' },
-  { test_id: 1, body: "Какой знак восточного гороскопа следует за знаком Дракона?" },
-  { test_id: 1, body: 'Кто ввел в русский алфавит букву "Ё"?' },
-  { test_id: 1, body: "Как звали жену Рембрандта?" }
+questions = Question.create([
+  { test_id: tests[0].id, body: "Из какого предмета кухонного обихода отлили стойкого оловянного солдатика из сказки Андерсена?" },
+  { test_id: tests[0].id, body: "Как называется линия, изображающая процесс, происходящий без теплообмена с окружающей средой?" },
+  { test_id: tests[0].id, body: 'Какое изысканное блюдо принесли на обед отбывавшему срок в пятнадцать суток Верзиле в комедии Л.Гайдая "Операция Ы"?' },
+  { test_id: tests[0].id, body: "Какой знак восточного гороскопа следует за знаком Дракона?" },
+  { test_id: tests[0].id, body: 'Кто ввел в русский алфавит букву "Ё"?' },
+  { test_id: tests[0].id, body: "Как звали жену Рембрандта?" }
 ])
 
 Answer.create([
-  { question_id: 1 },
-  { question_id: 1 },
-  { question_id: 3 },
-  { question_id: 4 },
-  { question_id: 5 },
-  { question_id: 6 }
+  { question_id: questions[0].id },
+  { question_id: questions[0].id },
+  { question_id: questions[0].id },
+  { question_id: questions[0].id },
+  { question_id: questions[1].id },
+  { question_id: questions[1].id }
 ])
