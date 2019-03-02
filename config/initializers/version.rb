@@ -1,5 +1,5 @@
 module TestGuru
-  VERSION = '0.4.0'
+  VERSION = '0.4.1'
 
   def self.version
     VERSION
