@@ -5,10 +5,21 @@ class Test < ApplicationRecord
   has_many :tests_users
   has_many :users, through: :tests_users
 
-  def self.categories_with_title(title)
-    Test.joins(:category)
-        .where("categories.title = ?", title)
-        .order(title: :desc)
-        .pluck(:title)
+  validates :title, presence: true, uniqueness: { scope: :level }
+  validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0}
+
+  scope :complexity, -> (complexity) {
+    where(level: choice_complexity(complexity)) if [:easy, :average, :hard].include?(complexity) 
+  }
+  scope :title_with_category, ->(title) { 
+    joins(:category).where(categories: {title: name})
+                    .order(title: :desc)
+                    .pluck(:title)
+  }
+
+  protected
+
+  def self.choice_complexity(complexity)
+    { easy: 0..1, average: 2..4, hard: 5..Float::INFINITY }[complexity]
   end
 end
