@@ -1,9 +1,9 @@
 class User < ApplicationRecord
-  has_many :completed_tests
+  has_many :tests_users
+  has_many :tests, through: :tests_users
+  has_many :publications, class_name: 'Test', foreign_key: "author_id", inverse_of: :author
 
   def find_by_level(level)
-    Test.where(level: level)
-        .joins("JOIN completed_tests ON completed_tests.test_id = tests.id")
-        .where("completed_tests.test_id = ?", id)
+    tests.where(level: level)
   end
 end
