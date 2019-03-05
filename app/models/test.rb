@@ -11,13 +11,9 @@ class Test < ApplicationRecord
   scope :complexity, -> (complexity) {
     where(level: choice_complexity(complexity)) if [:easy, :average, :hard].include?(complexity) 
   }
-  scope :title_with_category, ->(title) { 
-    joins(:category).where(categories: {title: name})
-                    .order(title: :desc)
-                    .pluck(:title)
-  }
+  scope :title_with_category, ->(title) { joins(:category).where(categories: {title: name}) }
 
-  protected
+  private
 
   def self.choice_complexity(complexity)
     { easy: 0..1, average: 2..4, hard: 5..Float::INFINITY }[complexity]
