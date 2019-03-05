@@ -1,4 +1,4 @@
-users = User.create(login: 'ss', password: 'ss')
+user = User.create(email: "ssssssssss@mail.su", login: 'ss', password: 'ss')
 
 categogies = Category.create([
   { title: 'Разное' },
@@ -8,9 +8,9 @@ categogies = Category.create([
 ])
 
 tests = Test.create([
-  { category_id: categogies[0].id, author_id: user[0].id, title: 'Просто тест' },
-  { category_id: categogies[0].id, author_id: user[0].id, title: 'Супер тест' },
-  { category_id: categogies[0].id, author_id: user[0].id, title: 'Тест' }
+  { category_id: categogies[0].id, author_id: user.id, title: 'Просто тест' },
+  { category_id: categogies[0].id, author_id: user.id, title: 'Супер тест' },
+  { category_id: categogies[0].id, author_id: user.id, title: 'Тест' }
 ])
 
 questions = Question.create([
@@ -23,10 +23,10 @@ questions = Question.create([
 ])
 
 Answer.create([
-  { question_id: questions[0].id },
-  { question_id: questions[0].id },
-  { question_id: questions[0].id },
-  { question_id: questions[0].id },
-  { question_id: questions[1].id },
-  { question_id: questions[1].id }
+  { question_id: questions[0].id, answer: 'Неверно' },
+  { question_id: questions[0].id, answer: 'Неверно' },
+  { question_id: questions[0].id, answer: 'Неверно' },
+  { question_id: questions[0].id, answer: 'Верно', correct: true },
+  { question_id: questions[1].id, answer: 'Неверно' },
+  { question_id: questions[1].id, answer: 'Верно', correct: true }
 ])

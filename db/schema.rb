@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2019_03_01_111404) do
 
   create_table "answers", force: :cascade do |t|
-    t.string "answer"
+    t.string "answer", null: false
     t.boolean "correct", default: false
     t.integer "question_id"
     t.datetime "created_at", null: false
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 2019_03_01_111404) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "email", null: false
     t.string "login", null: false
     t.string "password", null: false
     t.datetime "created_at", null: false
