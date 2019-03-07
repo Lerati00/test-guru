@@ -61,6 +61,6 @@ class QuestionsController < ApplicationController
   end
 
   def rescue_with_question_not_found
-    head 404
+    redirect_to '/404/'
   end
 end
