@@ -11,7 +11,7 @@ class Answer < ApplicationRecord
   validates :answer, presence: true
   validate :validate_max_answers, on: :create
 
-  protected
+  private
 
   def validate_max_answers
     errors.add(:answer, MAXIMUM_ANSWERS_ERROR)  if question.answers.size > MAXIMUM_ANSWERS
