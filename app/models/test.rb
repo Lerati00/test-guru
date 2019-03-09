@@ -1,6 +1,6 @@
 class Test < ApplicationRecord
   belongs_to :category, optional: true
-  belongs_to :author, class_name: 'User', inverse_of: :publications
+  belongs_to :author, class_name: 'User', inverse_of: :publications, optional: true
   has_many :questions, dependent: :destroy
   has_many :tests_users
   has_many :users, through: :tests_users

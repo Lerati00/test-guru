@@ -1,2 +1,6 @@
-<p><%= @question.body %></p>
-<%= link_to "Delete", test_question_path(@test, @question), method: :delete %>
+<p> <%= @question.body %> </p>
+
+<p>
+<%= link_to "Back", test_path(@question.test) %> |
+<td> <%= link_to "Edit", edit_question_path(@question) %> </td> 
+</p>
