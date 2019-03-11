@@ -1,5 +1,6 @@
 class TestsController < ApplicationController
-  before_action :find_test, only: %i[show destroy edit update]
+  before_action :find_test, only: %i[show destroy edit update start]
+  before_action :set_user, only: :start
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
 
@@ -41,10 +42,19 @@ class TestsController < ApplicationController
     redirect_to tests_path
   end
 
+  def start
+    @user.tests.push(@test)
+    redirect_to @user.test_passage(@test)
+  end
+
   private
 
   def test_params
     params.require(:test).permit(:title, :level)
+  end
+
+  def set_user
+    @user = User.first
   end
 
   def find_test
