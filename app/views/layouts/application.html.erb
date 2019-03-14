@@ -11,9 +11,14 @@
   </head>
 
   <body>
-    <div style = "min-height: 500px; padding-top: 50px">
+
+    <%= render 'shared/header' %>
+
+    <div class = "content">
       <%= yield %>
     </div>
+
     <%= render 'shared/footer' %>
+
   </body>
 </html>
