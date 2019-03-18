@@ -1,0 +1,18 @@
+<header class = "d-flex">
+  <div class = "container left_bar d-flex">
+    <div class = "test_guru"> <b> <%= link_to "TestGuru", root_path %> </b> </div>
+  </div>
+
+  <div class = "container right_bar d-flex">
+    <div class = 'logged_in'>
+      <% if logged_in?  %>
+        Welcome,  <%= current_user.name%>  |  
+        <%= link_to "Log out", logout_path, method: :delete %>
+      <%else%>
+        <%= link_to "Sign up", signup_path %> /
+        <%= link_to "Log in", login_path %>
+      <% end %>
+    </div>
+  </div>
+</header>
+

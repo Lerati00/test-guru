@@ -10,5 +10,9 @@
                 method: :delete,
                 data: {confirm: 'Are you sure?' } %> 
   </td>
-  <td> <%= button_to "Start", start_test_path(test) %> </td>
+  <% if logged_in? %>
+    <td> <%= button_to "Start", start_test_path(test) %> </td>
+  <% else %>
+    <td> <%= button_to "Start", start_test_path(test), disabled: true %> </td>
+  <% end %>
 </tr>
