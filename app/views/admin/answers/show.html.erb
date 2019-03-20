@@ -1,15 +1,15 @@
-<h1>Question</h1>
+<h1> <%= t('.question') %> </h1>
 
 <p> <%= @answer.question.body %> </p>
 
-<p><b>Answer:</b><br>
-  <%= @answer.answer %>
-</p>
+<h2> <%= t('.answer') %> <br></h2>
+<p> <%= @answer.answer %> </p>
 
-<p><b>Correct:</b><br>
+
+<p><b> <%= t('.correct') %></b><br>
   <%= @answer.correct %>
 </p>
 
-<%= link_to 'Back', admin_question_path(@answer.question.id) %>
-<%= link_to 'Edit', edit_admin_answer_path(@answer) %> 
+<%= link_to t('admin.control_link.back'), admin_question_path(@answer.question.id) %>
+<%= link_to t('admin.control_link.edit'), edit_admin_answer_path(@answer) %> 
 

@@ -3,8 +3,8 @@
   <td> <%= test_level(test) %> </td>
   <td> <%= test.questions.size %> </td>
   <% if user_signed_in? %>
-    <td> <%= button_to "Start", start_test_path(test) %> </td>
+    <td> <%= button_to t('.start'), start_test_path(test) %> </td>
   <% else %>
-    <td> <%= button_to "Start", start_test_path(test), disabled: true %> </td>
+    <td> <%= button_to t('.start'), start_test_path(test), disabled: true %> </td>
   <% end %>
 </tr>
