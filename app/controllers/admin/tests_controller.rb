@@ -22,9 +22,9 @@ class Admin::TestsController < Admin::BaseController
     @test = current_user.publications.new(test_params)
 
     if @test.save
-      redirect_to admin_test_path(@test)
+      redirect_to admin_test_path(@test), notice: t('.success')
     else
-      flash[:alert] = "Are you a Guru? Verify yuor Email and password please."
+      flash[:alert] = t('.verify')
       render :new
     end
   end
