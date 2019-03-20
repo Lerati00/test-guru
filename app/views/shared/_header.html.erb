@@ -5,12 +5,12 @@
 
   <div class = "container right_bar d-flex">
     <div class = 'logged_in'>
-      <% if logged_in?  %>
-        Welcome,  <%= current_user.name%>  |  
-        <%= link_to "Log out", logout_path, method: :delete %>
+      <% if user_signed_in?  %>
+        Welcome,  <%= current_user.first_name %>  |  
+        <%= link_to "Logout", destroy_user_session_path, method: :delete %>
       <%else%>
-        <%= link_to "Sign up", signup_path %> /
-        <%= link_to "Log in", login_path %>
+        <%= link_to "Sign up", new_user_registration_path %> /
+        <%= link_to "Log in", new_user_session_path %>
       <% end %>
     </div>
   </div>

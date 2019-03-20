@@ -1,26 +1,22 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
+  protect_from_forgery with: :exception 
   
-  helper_method :current_user,
-                :logged_in?
+  protected 
 
-  private
-
-  def authenticate_user!
-    unless current_user
-      session[:url] = request.url
-      return redirect_to login_path, alert: 'Are you a Guru? Verify your email and password please'
-    end
-
-    cookies[:email] = current_user.email
-  end
-    
-  def current_user
-    @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
+  def after_sign_in_path_for(user)
+    flash[:notice] = "Hello, #{user.first_name}"
+    user.is_a?(Admin) ? admin_tests_path : root_path
   end
 
-  def logged_in?
-    current_user.present?
+  
+  def configure_sign_up_params
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name])
+    params.require(:user).permit(:first_name, :email, :password, :password_confirmation, :last_name)
   end
-      
+
+  # If you have extra params to permit, append them to the sanitizer.
+  #def configure_account_update_params
+  #  devise_parameter_sanitizer.permit(:account_update, keys: [:attribute])
+  #end
+
 end
