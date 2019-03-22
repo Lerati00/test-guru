@@ -1,4 +1,4 @@
-<h1> <%= @question.test.title %> <h1>
+<h1> <%= @question.test.title %> </h1>
 
 <h2> <%= t('.header') %> </h2>
 
@@ -6,7 +6,7 @@
 
 <h2> <%= t('.answers') %> </h2>
 
-<p> <%= link_to t('.new_answer'), new_admin_question_answer_path(@question) %> </p>
+<p> <%= link_to t('.new_answer'), new_admin_question_answer_path(@question), class: "btn btn-success" %> </p>
 
 <p>  
   <ol>
@@ -15,6 +15,5 @@
 </p>
 
 <p>
-<%= link_to t('admin.control_link.back'), admin_test_path(@question.test) %> |
-<td> <%= link_to t('admin.control_link.edit'), edit_admin_question_path(@question) %> </td> 
+<%= link_to t('admin.control_link.back'), admin_test_path(@question.test) %> 
 </p>

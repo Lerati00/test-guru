@@ -37,6 +37,7 @@ ru:
     show:
       header: "Пройдите тест %{title}"
       number_of_questions: "Количество вопросов: %{current}/%{total}"
+      next: "Далее"
 
   shared:
     errors:

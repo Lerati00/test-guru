@@ -1,3 +1,5 @@
+
+<h1> <%= t('.header') %></h1>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <p>
     <%= f.label :email %><br />
@@ -29,3 +31,4 @@
 <div class = "container mt-3 mb-3">
   <%= render "devise/shared/links" %>
 </div>
+

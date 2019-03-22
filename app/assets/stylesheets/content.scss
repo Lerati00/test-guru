@@ -1,7 +1,39 @@
-.content{
-  margin-left: 12%;
-  margin-right: 12%;
-  padding: 20px;
-  min-height: 450px;
-  background: rgb(228, 231, 236);
+.content {
+  min-height: 100%!important;;
+}
+
+.content table th {
+  text-align: center;
+  color: rgb(78, 74, 37);
+}
+
+.content h1, .content .h1{
+  padding: 3rem;
+  text-align: center;
+  color: #007bff !important;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  border-bottom: 1px solid greenyellow; 
+}
+
+.dropdown select {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-;
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
 }
