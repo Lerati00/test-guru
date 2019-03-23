@@ -1,16 +1,23 @@
-<header class = "d-flex">
-  <div class = "container left_bar d-flex">
-    <div class = "test_guru"> <b> <%= link_to "TestGuru", root_path %> </b> </div>
+<header class="navbar bd-navbar text-light h6">
+  
+  <div>
+  <%= link_to "TestGuru", root_path , class: "navbar-brand"%>
+
+  <% if user_signed_in?  %>
+    <% if current_user.admin? %>
+      <%= link_to "AdminPanel", admin_tests_path, class: "btn btn-outline-warning" %>
+    <% end %>
+  <% end %>
   </div>
 
-  <div class = "container right_bar d-flex">
-    <div class = 'logged_in'>
+  <div>
+    <div>
       <% if user_signed_in?  %>
-        <%= t('.welcome', name: current_user.first_name)%> |  
-        <%= link_to t('.log_out'), destroy_user_session_path, method: :delete %>
+        <%= t('.welcome', name: current_user.first_name)%>   
+        <%= link_to t('.log_out'), destroy_user_session_path, method: :delete, class: "btn btn-outline-primary" %>
       <%else%>
-        <%= link_to t('.sign_up'), new_user_registration_path %> /
-        <%= link_to t('.log_in'), new_user_session_path %>
+        <%= link_to t('.sign_up'), new_user_registration_path, class: "btn btn-outline-primary" %> 
+        <%= link_to t('.log_in'), new_user_session_path, class: "btn btn-outline-primary" %>
       <% end %>
     </div>
   </div>

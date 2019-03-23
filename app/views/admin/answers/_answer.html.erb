@@ -1,7 +1,7 @@
 <li>
   <p> <%= answer.answer %> <br>
-    <%= link_to t('admin.control_link.show'), admin_answer_path(answer) %> | 
-    <%= link_to t('admin.control_link.edit'), edit_admin_answer_path(answer) %> | 
-    <%= link_to t('admin.control_link.delete'), admin_answer_path(answer), method: :delete, data: { confirm: t('.confirm') } %>
+    <%= link_to t('admin.control_link.show'), admin_answer_path(answer), class: "btn btn-success" %> 
+    <%= link_to t('admin.control_link.edit'), edit_admin_answer_path(answer), class: "btn btn-warning"%> 
+    <%= link_to t('admin.control_link.delete'), admin_answer_path(answer), method: :delete, data: { confirm: t('.confirm') }, class: "btn btn-danger" %>
   </p>
 </li>

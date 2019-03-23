@@ -1,14 +1,12 @@
-.flash {
-  border: 2px solid;
-  padding: 10px;
-  border-radius: 5px; 
-  display: inline-block;
+
+.alert.alert-alert{
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
 }
 
-.flash.alert{
-  border-color: #ee2727;
-}
-
-.flash.notice{
-  border-color: #27eebc;
+.alert.alert-notice{
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
 }
