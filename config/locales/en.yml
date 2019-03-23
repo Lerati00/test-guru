@@ -36,6 +36,9 @@ en:
     show:
       header: "Pass the %{title} test"
       number_of_questions: "Number of questions: %{current}/%{total}"
+    gist:
+      success: "Gist was created successfully"
+      failure: "An error occurred while saving the Gist"
 
   shared:
     errors:
