@@ -37,7 +37,7 @@ en:
       header: "Pass the %{title} test"
       number_of_questions: "Number of questions: %{current}/%{total}"
     gist:
-      success: "Gist was created successfully"
+      success: "Gist was created successfully ob %{url}"
       failure: "An error occurred while saving the Gist"
 
   shared:
@@ -55,6 +55,12 @@ en:
     base:
       admin_require:
         not_authorized: "You are not authorized to view this page."
+    gists:
+      index:
+        header: "All Gist question"
+        url: "URL"
+        questions: "Questions"
+        users: "Users"
     tests:
       new: 
         header: "Create new test"
@@ -144,3 +150,7 @@ en:
         password_confirmation: "Password confirmation"
         sign_up: "Sign up"
         minimum_password_length: "(%{number} characters minimum)"
+
+  services:
+    gist:
+      description: "Are question about %{test_title} from TestGuru"

@@ -39,7 +39,7 @@ ru:
       number_of_questions: "Количество вопросов: %{current}/%{total}"
       next: "Далее"
     gist:
-      success: "Gist успешно сохранен"
+      success: "Gist успешно сохранен на %{url}"
       failure: "Во время сохранения Gist произошла ошибка"
 
   shared:
@@ -59,6 +59,12 @@ ru:
     base:
       admin_require:
         not_authorized: "Вы не авторизованы для просмотра этой страницы."
+    gists:
+      index:
+        header: "Все Gist вопросы" 
+        url: "Url адрес"
+        questions: "Вопросы"
+        users: "Пользователи"
     tests:
       new:
         header: "Создать новый тест"
@@ -145,5 +151,10 @@ ru:
         password_confirmation: "Подтверждение пароля"
         sign_up: "Регистрация"
         minimum_password_length: "(Минимальное количество символов %{number})"
+  
+  services:
+    gist:
+      description: "Вопрос к %{test_title} от TestGuru"
+
 
   
