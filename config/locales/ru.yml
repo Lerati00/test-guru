@@ -26,7 +26,7 @@ ru:
       header: "Доступные Тесты"
       title: "Название"
       level: "Уровень"
-      questions_count: "Количество вопросов"
+      questions_count: "Вопросы"
       action: "Действие"
     test:
       start: "Начните"
