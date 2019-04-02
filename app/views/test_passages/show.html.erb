@@ -1,7 +1,11 @@
 <h1> <%= t('.header', title: @test_passage.test.title) %> </h1>
 
 <h3> <%= t('.number_of_questions', current: @test_passage.number_question, total: @test_passage.total_questions) %> </h3>
-
+<div class = "container-progress">
+  <%= content_tag :div, "", class: 'progress-bar', 
+                  data: { progress_percent: progress_percent(@test_passage.number_question - 1, @test_passage.total_questions)  } do %>
+  <%end%>
+</div>
 <p>
   <%= "#{@test_passage.number_question}. #{@test_passage.current_question.body}" %>
 </p>
@@ -15,5 +19,6 @@
     <% end %>
 
     <%= link_to "Gist Question", gist_test_passage_path(@test_passage), method: :post %>
-    <p> <%= form.submit t('.next'), class: "btn btn-success" %> </p>
+    <p> <%= form.submit t('.next'),  class: "btn btn-success"%> 
+    </p>
 <% end %>
