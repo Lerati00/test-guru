@@ -91,6 +91,8 @@ ru:
         edit: "Редактировать"
         delete: "Удалить"
         confirm: "Уверены ли вы?"
+      form_inline:
+        submit: "Ок"
     questions:
       question:
         confirm: "Уверены ли вы?"
