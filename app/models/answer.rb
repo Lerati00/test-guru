@@ -1,10 +1,8 @@
 class Answer < ApplicationRecord
   MAXIMUM_ANSWERS = 4
-  MINIMUM_ANSWERS = 1
   MAXIMUM_ANSWERS_ERROR = "Maximum number of answers in question is #{MAXIMUM_ANSWERS}"
-  MINIMUM_ANSWERS_ERROR = "Minimum number of answers in question is #{MINIMUM_ANSWERS}"
 
-  belongs_to :question
+  belongs_to :question, optional: true
 
   scope :corrected, -> { where(correct: true) }
 

@@ -1,4 +1,4 @@
-user = User.create(email: "ssssssssss@mail.su", name: 'ss', password: 'ss')
+user = User.create(email: "ssssssssss@mail.su", first_name: 'ss', password: 'ss')
 
 categogies = Category.create([
   { title: 'Разное' },
