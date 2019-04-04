@@ -1,5 +1,3 @@
-user = User.create(email: "ssssssssss@mail.su", first_name: 'ss', password: 'ss')
-
 categogies = Category.create([
   { title: 'Разное' },
   { title: 'Исскуство' },
@@ -8,9 +6,9 @@ categogies = Category.create([
 ])
 
 tests = Test.create([
-  { category_id: categogies[0].id, author_id: user.id, title: 'Просто тест' },
-  { category_id: categogies[0].id, author_id: user.id, title: 'Супер тест' },
-  { category_id: categogies[0].id, author_id: user.id, title: 'Тест' }
+  { category_id: categogies[0].id, title: 'Просто тест' },
+  { category_id: categogies[0].id, title: 'Супер тест' },
+  { category_id: categogies[0].id, title: 'Тест' }
 ])
 
 questions = Question.create([
