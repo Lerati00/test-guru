@@ -19,6 +19,9 @@ en:
       answer:
         answer: "Answer"
         correct: "Correct?"
+      feedback:
+        title: "Title"
+        body: "Body"
 
   tests:
     index:
@@ -29,6 +32,11 @@ en:
       action: "Action"
     test:
       start: "Start"
+
+  feedbacks:
+    new: 
+      header: "Feedback"
+      send: "Send"
 
   test_passages:
     result:
@@ -125,9 +133,14 @@ en:
       sign_up: "Sign up"
       log_in: "Log in"
       log_out: "Log out"
+      feedback: "Feedback"
     footer:
       description: "Short description and text link,"
       link: "Learning project at Thinknetic online school"
+    errors:
+      header:
+        one: "%{count} error detected:"
+        other: "%{count} errors detected:"
   
   devise:
     sessions:

@@ -18,6 +18,7 @@ class User < ApplicationRecord
   has_many :tests, through: :test_passages
   has_many :publications, class_name: 'Test', foreign_key: "author_id", inverse_of: :author
   has_many :gists
+  has_many :feedbacks
 
   validates :email, uniqueness: true, format: EMAIL_FORMAT
 

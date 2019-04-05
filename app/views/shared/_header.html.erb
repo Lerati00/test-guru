@@ -6,14 +6,16 @@
   <% if user_signed_in?  %>
     <% if current_user.admin? %>
       <%= link_to "AdminPanel", admin_tests_path, class: "btn btn-outline-warning"%>  
-      <%= link_to "GistQuestion", admin_gists_path, class: "btn btn-outline-danger"%>  
+      <%= link_to "GistQuestion", admin_gists_path, class: "btn btn-outline-danger"%> 
     <% end %>
+    <%= link_to t('shared.header.feedback'), new_feedback_path, class: "btn btn-outline-warning"%>
     </div>
     <div>
       <%= t('.welcome', name: current_user.first_name)%>   
       <%= link_to t('.log_out'), destroy_user_session_path, method: :delete, class: "btn btn-outline-primary" %>
     </div>  
   <%else%>
+      
     </div>
     <div>
       <%= link_to t('.sign_up'), new_user_registration_path, class: "btn btn-outline-primary" %> 
