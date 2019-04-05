@@ -37,6 +37,8 @@ en:
     new: 
       header: "Feedback"
       send: "Send"
+    create:
+      success: "Message sent successfully"
 
   test_passages:
     result:

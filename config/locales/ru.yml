@@ -37,6 +37,9 @@ ru:
     new: 
       header: "Обратная связь"
       send: "Отправить"
+    create:
+      success: "Сообщение успешно отправлено"
+
   test_passages:
     result:
       header: "Тест %{title} завершён"
