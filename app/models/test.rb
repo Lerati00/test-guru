@@ -11,7 +11,7 @@ class Test < ApplicationRecord
   scope :complexity, -> (complexity) {
     where(level: choice_complexity(complexity)) if [:easy, :average, :hard].include?(complexity) 
   }
-  scope :by_title_category, ->(title) { joins(:category).where(categories: {title: title}) }
+  scope :by_title_category, ->(name) { joins(:category).where(categories: {title: name}) }
 
   private
 

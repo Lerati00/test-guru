@@ -25,8 +25,9 @@ ru:
         body: "Teкст"
   
   badges:
-    user_badges: "Полученные бейджи"
-    rest_badges: "Остальные бейджи"
+    index:
+      user_badges: "Полученные бейджи"
+      rest_badges: "Остальные бейджи"
   tests:
     index:
       header: "Доступные Тесты"
