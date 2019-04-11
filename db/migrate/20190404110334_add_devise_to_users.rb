@@ -35,7 +35,6 @@ class AddDeviseToUsers < ActiveRecord::Migration[5.2]
       # Uncomment below if timestamps were not included in your original model.
       # t.timestamps null: false
     end
-    remove_column(:users, :password_digest)
     change_column_default(:users, :email, '')
 
 
@@ -52,7 +51,6 @@ class AddDeviseToUsers < ActiveRecord::Migration[5.2]
                             :confirmation_sent_at, :unconfirmed_email 
     )
 
-    add_column(:users, :password_digest, :string)
     remove_index(:users, :email)
     change_column_default(:users, :email, nil)
   end

@@ -6,6 +6,9 @@ ru:
     attributes:
       test:
         title: "Название"
+      feedback:
+        title: "Тема"
+        body: "Текст"
 
     errors:
       messages:

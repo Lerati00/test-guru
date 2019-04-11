@@ -5,7 +5,10 @@ en:
   
     attributes:
       test:
-       title: "Title"
+        title: "Title"
+      feedback:
+        title: "Title"
+        body: "Body"
 
     errors:
       messages:
