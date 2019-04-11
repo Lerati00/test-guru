@@ -19,6 +19,8 @@ class User < ApplicationRecord
   has_many :publications, class_name: 'Test', foreign_key: "author_id", inverse_of: :author
   has_many :gists
   has_many :feedbacks
+  has_many :user_badges
+  has_many :badges, through: :user_badges
 
   validates :email, uniqueness: true, format: EMAIL_FORMAT
 
@@ -32,6 +34,10 @@ class User < ApplicationRecord
 
   def admin?
     is_a?(Admin)
+  end
+
+  def passed_tests
+    tests.where('test_passages.passed = ?', true).distinct(:id)
   end
 
 end

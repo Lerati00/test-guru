@@ -1,0 +1,11 @@
+<h1 class = "header-badges"> <%= t('.user_badges')  %> </h1>
+
+<div class = 'badge-user-list'>
+  <%= render current_user.badges %>
+</div>
+
+<h1 class = "header-badges"> <%= t('.rest_badges') %> </h1>
+
+<div class = 'badge-rest-list'>
+  <%= render Badge.rest_badges(current_user.badges) %>
+</div>
