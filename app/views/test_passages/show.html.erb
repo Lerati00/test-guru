@@ -1,7 +1,7 @@
 <h1> <%= t('.header', title: @test_passage.test.title) %> </h1>
 
 <% if @test_passage.test.timer.present?%>
-<div class = 'timer'>
+<div class = 'timer col-2'>
   Timer<br>
   <%= content_tag :span, class: 'time', data: {start_timer: @test_passage.created_at.to_i, timer: @test_passage.test.timer } do%>
   <%end%>
