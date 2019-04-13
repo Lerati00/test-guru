@@ -7,6 +7,9 @@
     <% if current_user.admin? %>
       <%= link_to "AdminPanel", admin_tests_path, class: "btn btn-outline-warning"%>  
       <%= link_to "GistQuestion", admin_gists_path, class: "btn btn-outline-danger"%> 
+      <%= link_to "Badges", admin_badges_path, class: "btn btn-outline-success"%> 
+    <%else%>  
+      <%= link_to "Badges", badges_path, class: "btn btn-outline-success"%> 
     <% end %>
     <%= link_to t('shared.header.feedback'), new_feedback_path, class: "btn btn-outline-warning"%>
     </div>

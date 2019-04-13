@@ -1,0 +1,41 @@
+// Place all the styles related to the badges controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.badge-card {
+  margin: 10px;
+  border: 5px groove rgba(15, 15, 14, 0.548);
+  border-radius: 3%;
+  min-height: 100px;
+}
+
+.badge-image{
+  border-right: 1px solid rgba(15, 15, 14, 0.548);
+}
+
+.badge-image img {
+  height: 100px; 
+}
+
+.badge-title {
+  padding: 10px 10px 10px 10px;
+  min-height: 50px;
+  border-bottom: 1px solid rgba(15, 15, 14, 0.548);
+}
+
+.badge-description{
+  padding: 10px 10px 10px 10px;
+}
+
+.badge-rest-list img {
+  filter: alpha(Opacity=32);
+  opacity: 0.32; 
+}
+
+.header-badges h1 {
+  color: gray;
+  text-align: center;
+  border-bottom: none;
+}
+

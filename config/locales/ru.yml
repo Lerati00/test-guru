@@ -23,6 +23,11 @@ ru:
       feedback:
         title: "Тема"
         body: "Teкст"
+  
+  badges:
+    index:
+      user_badges: "Полученные бейджи"
+      rest_badges: "Остальные бейджи"
   tests:
     index:
       header: "Доступные Тесты"
@@ -68,6 +73,11 @@ ru:
     base:
       admin_require:
         not_authorized: "Вы не авторизованы для просмотра этой страницы."
+    badges:
+      new:
+        header: "Создать новый бейдж"
+      edit:
+        header: "Редактировать бейдж"
     gists:
       index:
         header: "Все Gist вопросы" 
