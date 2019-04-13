@@ -2,13 +2,11 @@ document.addEventListener('turbolinks:load', function() {
   control = document.querySelector('.timer .time')
 
   if (control){
-    time = 30 * 60 + 1
     timer(control)
   }
 })
 
 function timer(){
-  time--
   var startTimer = Number(control.dataset.startTimer) 
   var timer = control.dataset.timer * 60 
   var endTimer = startTimer + timer
