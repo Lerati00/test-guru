@@ -18,4 +18,5 @@ class Test < ApplicationRecord
   def self.choice_complexity(complexity)
     { easy: 0..1, average: 2..4, hard: 5..Float::INFINITY }[complexity]
   end
+
 end
