@@ -37,7 +37,7 @@ class TestPassage < ApplicationRecord
   end
 
   def end_time?
-    test.timer.present? ? Time.now >= created_at + 1.second : false
+    test.timer.present? ? Time.now > created_at + test.timer.minute : false
   end
 
   private
