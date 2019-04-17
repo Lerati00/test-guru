@@ -36,6 +36,10 @@ class TestPassage < ApplicationRecord
     (correct_questions.to_f/total_questions * 100).to_i
   end
 
+  def end_time?
+    test.timer.present? ? Time.now > created_at + test.timer.minute : false
+  end
+
   private
 
   def before_validation_set_question
